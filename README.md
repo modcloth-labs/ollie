@@ -118,5 +118,6 @@ Make sure that `YourWonderfulCheck` is represented as `your_wonderful_check`
 
 Ollie was started by [Nick Rowe](mailto:n.rowe@modcloth.com) in February 2013.
 
+--
 
 `How's the weather Ollie?`

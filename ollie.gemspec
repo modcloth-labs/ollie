@@ -7,10 +7,10 @@ Gem::Specification.new do |gem|
   gem.name          = "ollie"
   gem.version       = Ollie::VERSION
   gem.authors       = ["Nick Rowe"]
-  gem.email         = ["nixterrimus@dcxn.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.email         = ["n.rowe@modcloth.com"]
+  gem.description   = %q{A status checker}
+  gem.summary       = %q{A status checker that gives visibility into the systems that your app depends on}
+  gem.homepage      = "https://github.com/modcloth/ollie"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
