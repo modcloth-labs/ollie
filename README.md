@@ -1,6 +1,6 @@
 # Ollie
 
-Ollie is a system checker for your app.  It reports on how the systems your app depends on are performing with more granularity than `everything-is-swell` or `everything-is-failing`.
+Ollie is a micro-library for building checks that the environment your application runs in is looking ok.  It reports on how the systems your app depends on are performing with more granularity than `everything-is-swell` or `everything-is-failing`.
 
 Here's an example of the kind of output Ollie would generate at `/server-status` when reporting on `git` and `redis`:
 
