@@ -14,15 +14,15 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<link rel="stylesheet" href="/vendor/reveal.js/css/reveal.min.css">
-<link rel="stylesheet" href="/vendor/reveal.js/css/theme/default.css" id="theme">
+<link rel="stylesheet" href="../../vendor/reveal.js/css/reveal.min.css">
+<link rel="stylesheet" href="../../vendor/reveal.js/css/theme/default.css" id="theme">
 
 <!-- For syntax highlighting -->
 <link rel="stylesheet" href="/vendor/reveal.js/lib/css/zenburn.css">
 
 <!-- If the query includes 'print-pdf', use the PDF print sheet -->
 <script>
-document.write( '<link rel="stylesheet" href="/vendor/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+document.write( '<link rel="stylesheet" href="../../vendor/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 </script>
 
 <!--[if lt IE 9]>
@@ -73,15 +73,15 @@ document.write( '<link rel="stylesheet" href="/vendor/reveal.js/css/print/' + ( 
   </section>
   <section>
     <h2>Everything is fine</h2>
-    <img src='/images/200.jpeg'>
+    <img src='images/200.jpeg'>
   </section>
   <section>
     <h2>Everything is not fine!</h2>
-    <img src='/images/500.jpeg'>
+    <img src='images/500.jpeg'>
   </section>
   <section>
     <h2>Wake Up All the People!</h2>
-    <img src='/images/panic.jpeg'>
+    <img src='images/panic.jpeg'>
     <p class='fragment'>How long have things been trending badly?</p>
     <p class='fragment'>About 3 days</p>
   </section>
@@ -105,7 +105,7 @@ document.write( '<link rel="stylesheet" href="/vendor/reveal.js/css/print/' + ( 
   </section>
   <section>
     <h2>Let me tell you everything</h2>
-    <img src='/images/talkative.jpeg'>
+    <img src='images/talkative.jpeg'>
   </section>
   <section>
     <pre><code>{&#x000A;    "git": {&#x000A;        "revision": "9c2a82a968bfc62d8d5c9fb5a947ec58a43f1560",&#x000A;        "tag": "deploy",&#x000A;        "branch": "master",&#x000A;        "updated_at": "2013-02-14T10:39:31-08:00",&#x000A;        "errors": []&#x000A;    },&#x000A;    "resque": {&#x000A;        "last_restart": "2013-02-14T10:39:31-08:00",&#x000A;        "failed_jobs": 0,&#x000A;        "pending_jobs": 100,&#x000A;        "errors": []&#x000A;    }&#x000A;}</code></pre>
@@ -185,8 +185,8 @@ document.write( '<link rel="stylesheet" href="/vendor/reveal.js/css/print/' + ( 
   </div>
 </div>
 
-<script src="/vendor/reveal.js/lib/js/head.min.js"></script>
-<script src="/vendor/reveal.js/js/reveal.min.js"></script>
+<script src="../../vendor/reveal.js/lib/js/head.min.js"></script>
+<script src="../../vendor/reveal.js/js/reveal.min.js"></script>
 
 <script>
 
@@ -205,12 +205,12 @@ Reveal.initialize({
 
   // Optional libraries used to extend on reveal.js
   dependencies: [
-    { src: '/vendor/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-    { src: '/vendor/reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-    { src: '/vendor/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-    { src: '/vendor/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-    { src: '/vendor/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-    { src: '/vendor/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+    { src: '../../vendor/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: '../../vendor/reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: '../../vendor/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: '../../vendor/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: '../../vendor/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+    { src: '../../vendor/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
     //{ src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
   ]
 });

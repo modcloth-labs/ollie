@@ -14,15 +14,15 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<link rel="stylesheet" href="/vendor/reveal.js/css/reveal.min.css">
-<link rel="stylesheet" href="/vendor/reveal.js/css/theme/default.css" id="theme">
+<link rel="stylesheet" href="../../vendor/reveal.js/css/reveal.min.css">
+<link rel="stylesheet" href="../../vendor/reveal.js/css/theme/default.css" id="theme">
 
 <!-- For syntax highlighting -->
 <link rel="stylesheet" href="/vendor/reveal.js/lib/css/zenburn.css">
 
 <!-- If the query includes 'print-pdf', use the PDF print sheet -->
 <script>
-document.write( '<link rel="stylesheet" href="/vendor/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+document.write( '<link rel="stylesheet" href="../../vendor/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 </script>
 
 <!--[if lt IE 9]>
@@ -190,8 +190,8 @@ body {
   </div>
 </div>
 
-<script src="/vendor/reveal.js/lib/js/head.min.js"></script>
-<script src="/vendor/reveal.js/js/reveal.min.js"></script>
+<script src="../../vendor/reveal.js/lib/js/head.min.js"></script>
+<script src="../../vendor/reveal.js/js/reveal.min.js"></script>
 
 <script>
 
@@ -210,12 +210,12 @@ Reveal.initialize({
 
   // Optional libraries used to extend on reveal.js
   dependencies: [
-    { src: '/vendor/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-    { src: '/vendor/reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-    { src: '/vendor/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-    { src: '/vendor/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-    { src: '/vendor/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-    { src: '/vendor/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+    { src: '../../vendor/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: '../../vendor/reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: '../../vendor/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: '../../vendor/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: '../../vendor/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+    { src: '../../vendor/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
     //{ src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
   ]
 });
