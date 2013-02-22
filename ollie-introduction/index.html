@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+
+<title>Introduction to Ollie</title>
+
+<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+<meta name="author" content="Hakim El Hattab">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="stylesheet" href="/vendor/reveal.js/css/reveal.min.css">
+<link rel="stylesheet" href="/vendor/reveal.js/css/theme/default.css" id="theme">
+
+<!-- For syntax highlighting -->
+<link rel="stylesheet" href="/vendor/reveal.js/lib/css/zenburn.css">
+
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+document.write( '<link rel="stylesheet" href="/vendor/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+</script>
+
+<!--[if lt IE 9]>
+    <script src="/vendor/reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+  <div class="slides">  
+    <section id='a-little-bit-of-panic'>
+  <section data-state='blackout'>
+    <h2>Is Your App Ok Right now?</h2>
+    <p>
+      <small>(Spacebar to move to next slide)</small>
+    </p>
+  </section>
+  <section data-state='alert'>
+    <p>Is the database all right?</p>
+  </section>
+  <section>
+    <p>Redis too?</p>
+  </section>
+  <section data-state='alert'>
+    <p>Solr is performing well?</p>
+  </section>
+  <section data-state='alert'>
+    <p>Background jobs processing?</p>
+  </section>
+  <section data-state='soothe'>
+    <h3>Relax</h3>
+    <h4>Everything is probably ok</h4>
+    <p>Server status says so, right?</p>
+  </section>
+</section>
+<section id='how-server-status-currently-works'>
+  <section>
+    <h2>How Server Status works today</h2>
+  </section>
+  <section>
+    <h2>Hello, app!</h2>
+    <h3>How are things?</h3>
+    <img alt='from http://www.flickr.com/photos/puuikibeach/7573608746/' src='/images/circonus.png'>
+    <p>
+      <code>GET /system-status</code>
+    </p>
+  </section>
+  <section>
+    <h2>Everything is fine</h2>
+    <img src='/images/200.jpeg'>
+  </section>
+  <section>
+    <h2>Everything is not fine!</h2>
+    <img src='/images/500.jpeg'>
+  </section>
+  <section>
+    <h2>Wake Up All the People!</h2>
+    <img src='/images/panic.jpeg'>
+    <p class='fragment'>How long have things been trending badly?</p>
+    <p class='fragment'>About 3 days</p>
+  </section>
+  <section>
+    <h2>Apps make their own decision if things are bad</h2>
+    <p class='fragment'>Everything is awesome or awful</p>
+  </section>
+</section>
+<section>
+  <section>
+    <h2>How System Checks Could Work</h2>
+  </section>
+  <section>
+    <ol></ol>
+    <h2>Hello, app!</h2>
+    <h3>How are things?</h3>
+    <img alt='from http://www.flickr.com/photos/puuikibeach/7573608746/' src='/images/circonus.png'>
+    <p>
+      <code>GET /system-status</code>
+    </p>
+  </section>
+  <section>
+    <h2>Let me tell you everything</h2>
+    <img src='/images/talkative.jpeg'>
+  </section>
+  <section>
+    <pre><code>{&#x000A;    "git": {&#x000A;        "revision": "9c2a82a968bfc62d8d5c9fb5a947ec58a43f1560",&#x000A;        "tag": "deploy",&#x000A;        "branch": "master",&#x000A;        "updated_at": "2013-02-14T10:39:31-08:00",&#x000A;        "errors": []&#x000A;    },&#x000A;    "resque": {&#x000A;        "last_restart": "2013-02-14T10:39:31-08:00",&#x000A;        "failed_jobs": 0,&#x000A;        "pending_jobs": 100,&#x000A;        "errors": []&#x000A;    }&#x000A;}</code></pre>
+  </section>
+  <section>
+    <h2>Relationships are based on communication</h2>
+    <p class='fragment'>Let external systems look out for your app</p>
+  </section>
+</section>
+<section id='introducing-ollie'>
+  <h1>Ollie</h1>
+  <h3>A Framework for better system reporting</h3>
+  <p>
+    <small>Sleep better at night knowing your app is ok</small>
+  </p>
+</section>
+<section>
+  <h2>What Ollie is</h2>
+</section>
+<section>
+  <section>
+    <h2>Adding Ollie to Your app</h2>
+    <pre><code>gem 'ollie', git: 'git@github.com:modcloth/ollie.git'&#x000A;</code></pre>
+  </section>
+  <section>
+    <h2>Add ollie and a library of checks</h2>
+    <pre><code>gem 'ollie-modcloth-checks', git: 'git@github.com:modcloth/ollie-modcloth-checks.git'</code></pre>
+  </section>
+  <section>
+    <h2>Add a route for server-status</h2>
+    <pre><code>class StatusController < ActionController::Base&#x000A;  include Ollie::Controller&#x000A;end</code></pre>
+    <pre><code>Persona::Application.routes.draw do&#x000A;  get 'server-status', to: 'status#server_status'&#x000A;  #...&#x000A;end</code></pre>
+  </section>
+  <section>
+    <h2>Add the systems you'd like to check</h2>
+    <pre><code>class StatusController < ActionController::Base&#x000A;  include Ollie::Controller&#x000A;  report_on :git, :redis&#x000A;end</code></pre>
+  </section>
+</section>
+<section>
+  <section>
+    <h2>Writing a new ollie check</h2>
+  </section>
+  <section>
+    <h2>Define a new check category</h2>
+    <pre><code>module Ollie&#x000A;  class StatusLogger < Ollie::Base&#x000A;  end&#x000A;end</code></pre>
+  </section>
+  <section>
+    <h2>Declare individual checks</h2>
+    <pre><code>module Ollie&#x000A;  class StatusLogger < Ollie::Base&#x000A;    metric :file_size&#x000A;  end&#x000A;end</code></pre>
+  </section>
+  <section>
+    <h2>Fill in the Details</h2>
+    <pre><code>module Ollie&#x000A;  class StatusLogger < Ollie::Base&#x000A;    metric :file_size&#x000A;&#x000A;    def file_size&#x000A;        File.size("status.log")&#x000A;    end&#x000A;  end&#x000A;end</code></pre>
+  </section>
+</section>
+<section>
+  <h2>Contributing</h2>
+  <ul>
+    <li class='fragment'>Contribute Checks to ModCloth's library</li>
+    <li class='fragment'>Contribute to the Core library</li>
+  </ul>
+</section>
+<section>
+  <h2>Ollie is working towards Open Source</h2>
+  <h3 class='fragment'>Help Make it Awesome!</h3>
+</section>
+<section>
+  <h2>Thanks!</h2>
+  <img height='300' src='images/octocat.png'>
+  <p>
+    <small>
+      <a href='http://github.com/modcloth/ollie'>Ollie on Github</a>
+    </small>
+  </p>
+</section>
+
+  </div>
+</div>
+
+<script src="/vendor/reveal.js/lib/js/head.min.js"></script>
+<script src="/vendor/reveal.js/js/reveal.min.js"></script>
+
+<script>
+
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+  controls: false,
+  progress: true,
+  history: true,
+  center: true,
+  rollingLinks: false,
+
+  //theme: 'sky', // available themes are in /css/theme
+  theme: 'default',
+  transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+    { src: '/vendor/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: '/vendor/reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: '/vendor/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: '/vendor/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: '/vendor/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+    { src: '/vendor/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+    //{ src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});
+
+</script>
+
+</body>
+</html>
+

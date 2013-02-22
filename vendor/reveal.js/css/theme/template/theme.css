@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+
+<title></title>
+
+<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+<meta name="author" content="Hakim El Hattab">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="stylesheet" href="/vendor/reveal.js/css/reveal.min.css">
+<link rel="stylesheet" href="/vendor/reveal.js/css/theme/default.css" id="theme">
+
+<!-- For syntax highlighting -->
+<link rel="stylesheet" href="/vendor/reveal.js/lib/css/zenburn.css">
+
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+document.write( '<link rel="stylesheet" href="/vendor/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+</script>
+
+<!--[if lt IE 9]>
+    <script src="/vendor/reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+  <div class="slides">  
+    /*
+Syntax error: Undefined mixin 'bodyBackground'.
+        on line 8 of /Users/nicholasrowe/Code/ollie/source/vendor/reveal.js/css/theme/template/theme.scss, in `bodyBackground'
+        from line 8 of /Users/nicholasrowe/Code/ollie/source/vendor/reveal.js/css/theme/template/theme.scss
+
+3: /*********************************************
+4:  * GLOBAL STYLES
+5:  *********************************************/
+6: 
+7: body {
+8: 	@include bodyBackground();
+9: 	background-color: $backgroundColor;
+10: }
+11: 
+12: .reveal {
+13: 	font-family: $mainFont;
+
+Backtrace:
+/Users/nicholasrowe/Code/ollie/source/vendor/reveal.js/css/theme/template/theme.scss:8:in `bodyBackground'
+/Users/nicholasrowe/Code/ollie/source/vendor/reveal.js/css/theme/template/theme.scss:8
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:251:in `visit_mixin'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:318:in `visit_rule'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:126:in `visit_root'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/tree/root_node.rb:20:in `render'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/engine.rb:315:in `_render'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/engine.rb:262:in `render'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/lib/middleman-core/renderers/sass.rb:67:in `evaluate'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/tilt-1.3.3/lib/tilt/template.rb:76:in `render'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/lib/middleman-core/core_extensions/rendering.rb:252:in `render_individual_file'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/lib/middleman-core/core_extensions/rendering.rb:143:in `render_template'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/lib/middleman-core/sitemap/resource.rb:134:in `block in render'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/activesupport-3.2.12/lib/active_support/notifications.rb:125:in `instrument'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/lib/middleman-core/util.rb:49:in `instrument'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/lib/middleman-core/application.rb:222:in `instrument'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/lib/middleman-core/sitemap/resource.rb:14:in `instrument'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/lib/middleman-core/sitemap/resource.rb:120:in `render'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/lib/middleman-core/core_extensions/request.rb:255:in `process_request'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/lib/middleman-core/core_extensions/request.rb:204:in `block in call!'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/lib/middleman-core/core_extensions/request.rb:203:in `catch'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/lib/middleman-core/core_extensions/request.rb:203:in `call!'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/lib/middleman-core/core_extensions/request.rb:188:in `call'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:134:in `call'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/urlmap.rb:64:in `block in call'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/urlmap.rb:49:in `each'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/urlmap.rb:49:in `call'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:134:in `call'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/rack-test-0.6.2/lib/rack/mock_session.rb:30:in `request'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/rack-test-0.6.2/lib/rack/test.rb:230:in `process_request'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/rack-test-0.6.2/lib/rack/test.rb:57:in `get'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/lib/middleman-core/cli/build.rb:135:in `render_to_file'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/lib/middleman-core/cli/build.rb:273:in `block in execute!'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/lib/middleman-core/cli/build.rb:270:in `each'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/lib/middleman-core/cli/build.rb:270:in `execute!'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/lib/middleman-core/cli/build.rb:189:in `invoke!'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/thor-0.15.4/lib/thor/actions.rb:95:in `action'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/lib/middleman-core/cli/build.rb:65:in `build'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/thor-0.15.4/lib/thor/task.rb:27:in `run'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/thor-0.15.4/lib/thor/invocation.rb:120:in `invoke_task'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/thor-0.15.4/lib/thor.rb:275:in `dispatch'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/thor-0.15.4/lib/thor/base.rb:425:in `start'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/lib/middleman-core/cli.rb:77:in `method_missing'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/thor-0.15.4/lib/thor/task.rb:29:in `run'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/thor-0.15.4/lib/thor/task.rb:126:in `run'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/thor-0.15.4/lib/thor/invocation.rb:120:in `invoke_task'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/thor-0.15.4/lib/thor.rb:275:in `dispatch'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/thor-0.15.4/lib/thor/base.rb:425:in `start'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/lib/middleman-core/cli.rb:22:in `start'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/middleman-core-3.0.11/bin/middleman:18:in `<top (required)>'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/bin/middleman:23:in `load'
+/Users/nicholasrowe/.rbenv/versions/1.9.3-p327/bin/middleman:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'bodyBackground'.\A         on line 8 of /Users/nicholasrowe/Code/ollie/source/vendor/reveal.js/css/theme/template/theme.scss, in `bodyBackground'\A         from line 8 of /Users/nicholasrowe/Code/ollie/source/vendor/reveal.js/css/theme/template/theme.scss\A \A 3: /*********************************************\A 4:  * GLOBAL STYLES\A 5:  *********************************************/\A 6: \A 7: body {\A 8: 	@include bodyBackground();\A 9: 	background-color: $backgroundColor;\A 10: }\A 11: \A 12: .reveal {\A 13: 	font-family: $mainFont;"; }
+
+  </div>
+</div>
+
+<script src="/vendor/reveal.js/lib/js/head.min.js"></script>
+<script src="/vendor/reveal.js/js/reveal.min.js"></script>
+
+<script>
+
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+  controls: false,
+  progress: true,
+  history: true,
+  center: true,
+  rollingLinks: false,
+
+  //theme: 'sky', // available themes are in /css/theme
+  theme: 'default',
+  transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+    { src: '/vendor/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: '/vendor/reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: '/vendor/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: '/vendor/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: '/vendor/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+    { src: '/vendor/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+    //{ src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});
+
+</script>
+
+</body>
+</html>
+
