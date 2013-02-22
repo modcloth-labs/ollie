@@ -121,3 +121,5 @@ Ollie was started by [Nick Rowe](mailto:n.rowe@modcloth.com) in February 2013.
 --
 
 `How's the weather Ollie?`
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/a75fb0bfb1720e0f05b5483c5fec7828 "githalytics.com")](http://githalytics.com/modcloth/ollie)
