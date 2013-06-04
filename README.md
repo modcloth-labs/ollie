@@ -30,7 +30,7 @@ Ollie is even more useful when hooked up to an external monitoring system, like 
 First, include the gem in your `Gemfile`:
 
 ```ruby
-gem 'ollie', git: 'git@github.com:modcloth/ollie.git'
+gem 'ollie', git: 'git@github.com:modcloth-labs/ollie.git'
 ```
 
 Next, create the controller and route to where you would like Ollie
