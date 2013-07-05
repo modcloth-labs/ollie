@@ -24,7 +24,7 @@ module Ollie
 
     def class_for_string(klass_string)
       class_name = klass_string.to_s.camelize
-      Object.const_get("Ollie").const_get(class_name)
+      Ollie.const_get(class_name, false)
     end
   end
 end
